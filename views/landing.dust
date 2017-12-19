@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>{title}</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<script src="/javascripts/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<h1>{title}</h1>
+		<p>Welcome to {title}</p>
+		<p>You are logged in.</p>
+		<p>Temp current is: <span id="temp"></span></p>
+		<p><a href="/auth/logout">Logout</a>
+	</body>
+<script>
+	$(document).ready(function(){
+		console.log('we can do requests with: ', getCookie("access_token"));
+	});
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+</script>
+</html>
