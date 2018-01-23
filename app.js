@@ -8,7 +8,8 @@ var lessMiddleware = require('less-middleware');
 var adaro = require('adaro');
 
 var index = require('./routes/index');
-var auth = require('./routes/auth')
+var auth = require('./routes/auth');
+var api = require('./routes/api')
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/auth', auth);
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
