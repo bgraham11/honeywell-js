@@ -18,6 +18,6 @@ Instructions
 - Clone this repository
 - Run "npm install" from the root of this project
 - Open "config/options.global.js" and fill out the require configurations. Leave the port as '3000' unless you change the settings in the express server.
-- Run "node .bin/www"
+- Run "npm start"
 - Access URL you used in the global.options.js in your browser. 
 - Login via your Honeywell Account (not developer account), and select your thermostat.
