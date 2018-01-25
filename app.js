@@ -9,7 +9,7 @@ var adaro = require('adaro');
 
 var index = require('./routes/index');
 var auth = require('./routes/auth');
-var api = require('./routes/api')
+var api = require('./routes/api');
 
 var app = express();
 
